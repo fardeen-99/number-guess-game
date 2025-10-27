@@ -28,7 +28,7 @@ f.addEventListener("submit", (e) => {
   } else if (rand < i.value) {
     h.textContent = "its too high buddy";
     i.value = "";
-  } else if (rand === i.value) {
+  } else if (rand === inp) {
     h.textContent = `winner: the answer is ${rand}`;
     disable();
     bu();
@@ -70,6 +70,7 @@ function sp() {
 }
 
 function bu() {
+  i.textContent=""
   let bu = document.createElement("button");
   bu.textContent = "new game";
   box.append(bu);
